@@ -1,3 +1,2 @@
-dofile("./window_move.lua")
-dofile("./window_maximize_restore.lua")
+dofile("./window_move_resize.lua")
 dofile("./dock_shortcuts.lua")
