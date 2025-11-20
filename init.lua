@@ -1,2 +1,3 @@
-dofile("./window_move_resize.lua")
+dofile("./window_move.lua")
+dofile("./window_resize.lua")
 dofile("./dock_shortcuts.lua")
