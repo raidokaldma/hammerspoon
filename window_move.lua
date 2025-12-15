@@ -33,11 +33,12 @@ function moveWindow(proportions, moveDelta)
     if not win then return end
 
     local gridSize = sum(proportions)
+    hs.grid.setMargins({x=5,y=0})
     hs.grid.setGrid({w=gridSize,h=1})
 
     local segments = calculateSegments(proportions)
     local currentSegmentIdx = currentSegmentIdx(win, segments)
-    local nextSegmentIdx = currentSegmentIdx + moveDelta;
+    local nextSegmentIdx = currentSegmentIdx + moveDelta
     -- Ensure value is not out of bounds when window already at the edge
     nextSegmentIdx = hs.math.max(hs.math.min(nextSegmentIdx, #segments), 1)
     local nextSegment = segments[nextSegmentIdx]
